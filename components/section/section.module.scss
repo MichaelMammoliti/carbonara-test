@@ -1,0 +1,203 @@
+@import 'globals.scss';
+
+.section {
+  display: block;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+
+  &__background-image,
+  &__background-color,
+  &__content {
+    display: block;
+  }
+
+  &__background-image,
+  &__background-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__background-image {
+    z-index: 0;
+  }
+
+  &__background-color {
+    z-index: 1;
+  }
+
+  &__content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+
+  &--boxed {
+    width: auto;
+    height: auto;
+  }
+
+  &--absolute {
+    position: absolute;
+  }
+
+  &--align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--align-center & {
+    &__content {
+      height: auto;
+      width: auto;
+    }
+  }
+
+  &--spacing-none {
+    padding: 0;
+  }
+
+  &--spacing-small {
+    &__content {
+      padding: $size-48 $size-32;
+    }
+  }
+
+  &--spacing-medium {
+    &__content {
+      padding: $size-64 $size-48;
+    }
+  }
+
+  &--spacing-large {
+    &__content {
+      padding: $size-80 $size-64;
+    }
+  }
+
+  &--spacing-responsive & {
+    @include viewport(phone) {
+      &__content {
+        padding: $size-48 $size-32;
+      }
+    }
+
+    @include viewport(tablet) {
+      &__content {
+        padding: $size-64 $size-48;
+      }
+    }
+
+    @include viewport(desktop) {
+      &__content {
+        padding: $size-80 $size-64;
+      }
+    }
+  }
+
+  &--spacing-responsive-vertical & {
+    @include viewport(phone) {
+      &__content {
+        padding: $size-48 0;
+      }
+    }
+
+    @include viewport(tablet) {
+      &__content {
+        padding: $size-64 0;
+      }
+    }
+
+    @include viewport(desktop) {
+      &__content {
+        padding: $size-80 0;
+      }
+    }
+  }
+
+  &--spacing-responsive-horizontal & {
+    @include viewport(phone) {
+      &__content {
+        padding: 0 $size-48;
+      }
+    }
+
+    @include viewport(tablet) {
+      &__content {
+        padding: 0 $size-64;
+      }
+    }
+
+    @include viewport(desktop) {
+      &__content {
+        padding: 0 $size-80;
+      }
+    }
+  }
+
+  &--spacing-responsive-top & {
+    @include viewport(phone) {
+      &__content {
+        padding-top: $size-48;
+      }
+    }
+
+    @include viewport(tablet) {
+      &__content {
+        padding-top: $size-64;
+      }
+    }
+
+    @include viewport(desktop) {
+      &__content {
+        padding-top: $size-80;
+      }
+    }
+  }
+
+  &--spacing-responsive-bottom & {
+    @include viewport(phone) {
+      &__content {
+        padding-bottom: $size-48;
+      }
+    }
+
+    @include viewport(tablet) {
+      &__content {
+        padding-bottom: $size-64;
+      }
+    }
+
+    @include viewport(desktop) {
+      &__content {
+        padding-bottom: $size-80;
+      }
+    }
+  }
+
+  &--spacing-vertical-responsive & {
+    @include viewport(phone) {
+      &__content {
+        padding: $size-48 0;
+      }
+    }
+
+    @include viewport(tablet) {
+      &__content {
+        padding: $size-64 0;
+      }
+    }
+
+    @include viewport(desktop) {
+      &__content {
+        padding: $size-80 0;
+      }
+    }
+  }
+}

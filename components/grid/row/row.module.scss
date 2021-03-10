@@ -1,0 +1,144 @@
+@import 'globals.scss';
+
+@mixin responsive-spacing($value) {
+  &--spacing-responsive {
+    margin-left: -$value;
+  }
+
+  &--spacing-responsive > & {
+    &__items {
+      margin-bottom: -$value;
+
+      > * {
+        margin-bottom: $value;
+        padding-left: $value;
+      }
+    }
+  }
+}
+
+
+@mixin spacing($size, $value) {
+  &--spacing-#{$size} {
+    margin-left: -$value;
+  }
+
+  &--spacing-#{$size} > & {
+    &__items {
+      margin-bottom: -$value;
+
+      > * {
+        margin-bottom: $value;
+        padding-left: $value;
+      }
+    }
+  }
+}
+
+.row {
+  $module: &;
+  margin-left: 0;
+
+  &::before,
+  &::after {
+    display: table;
+    width: 100%;
+    content: '';
+  }
+
+  &__items {
+    float: left;
+    flex-wrap: wrap;
+  }
+
+  &--display-inline & {
+    &__items {
+      display: inline-flex;
+    }
+  }
+
+  &--display-block & {
+    &__items {
+      width: 100%;
+      display: flex;
+    }
+  }
+
+  &--no-wrap > & {
+    &__items {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &--align-items-center > & {
+    &__items {
+      align-items: center;
+    }
+  }
+
+  &--align-items-right > & {
+    &__items {
+      align-items: flex-end;
+    }
+  }
+
+  &--align-items-left > & {
+    &__items {
+      align-items: flex-start;
+    }
+  }
+
+  &--direction-row > & {
+    &__items {
+      flex-direction: row;
+    }
+  }
+
+  &--direction-column > & {
+    &__items {
+      flex-direction: column;
+    }
+  }
+
+  &--justify-content-center > & {
+    &__items {
+      justify-content: center;
+    }
+  }
+
+  &--justify-content-flex-end > & {
+    &__items {
+      justify-content: flex-end;
+    }
+  }
+
+  &--justify-content-space-between > & {
+    &__items {
+      justify-content: space-between;
+    }
+  }
+
+  &--justify-content-stretch > & {
+    &__items {
+      justify-content: stretch;
+    }
+  }
+
+  @include spacing('8', $size-8);
+  @include spacing('16', $size-16);
+  @include spacing('24', $size-24);
+  @include spacing('32', $size-32);
+  @include spacing('48', $size-48);
+
+  @include viewport(phone) {
+    @include responsive-spacing($size-32);
+  }
+
+  @include viewport(tablet) {
+    @include responsive-spacing($size-32);
+  }
+
+  @include viewport(desktop) {
+    @include responsive-spacing($size-48);
+  }
+}

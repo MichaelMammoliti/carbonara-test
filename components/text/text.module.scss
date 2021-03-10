@@ -1,0 +1,101 @@
+@import 'globals.scss';
+
+.text {
+  $module: &;
+
+  // Sizes
+  // ======================================
+  &--size-14 {
+    font-size: 14px;
+    line-height: 117%;
+  }
+
+  &--size-16 {
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  &--size-18 {
+    font-size: 18px;
+    line-height: 134%;
+  }
+
+  &--size-24 {
+    font-size: 24px;
+    line-height: 134%;
+  }
+
+  &--size-32 {
+    font-size: 32px;
+    line-height: 124%;
+  }
+
+  &--size-36 {
+    font-size: 36px;
+    line-height: 132%;
+  }
+
+  &--size-48 {
+    font-size: 48px;
+    line-height: 133%;
+  }
+
+  &--size-64 {
+    font-size: 64px;
+    line-height: 150%;
+  }
+
+  // Display
+  // ======================================
+  &--display-inline {
+    display: inline;
+  }
+
+  &--display-block {
+    display: block;
+  }
+
+  // Cases
+  // ======================================
+  &--cases-lower {
+    text-transform: lowercase;
+  }
+
+  &--cases-upper {
+    text-transform: uppercase;
+  }
+
+  &--cases-capitalise {
+    text-transform: capitalize;
+  }
+
+  // Align
+  // ======================================
+  &--align-left {
+    text-align: left;
+  }
+
+  &--align-center {
+    text-align: center;
+  }
+
+  &--align-right {
+    text-align: right;
+  }
+
+  // Decoration
+  // ======================================
+  &--underline {
+    text-decoration: underline;
+  }
+
+  // Colors
+  // ======================================
+  &--color-white {
+    color: #fff;
+  }
+
+  &--color-black {
+    color: #000;
+  }
+}

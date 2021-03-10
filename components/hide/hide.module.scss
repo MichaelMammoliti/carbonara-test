@@ -1,0 +1,25 @@
+@import 'globals.scss';
+
+@include viewport(phone) {
+  .hide {
+    &--phone {
+      display: none;
+    }
+  }
+}
+
+@include viewport(tablet) {
+  .hide {
+    &--tablet {
+      display: none;
+    }
+  }
+}
+
+@include viewport(desktop) {
+  .hide {
+    &--desktop {
+      display: none;
+    }
+  }
+}

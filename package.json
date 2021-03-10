@@ -1,0 +1,44 @@
+{
+  "name": "carbonara-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "npm run lint-css && npm run lint-js",
+    "lint-js": "npx eslint --ext .jsx --ext .js .",
+    "lint-css": "npx stylelint \"**/*.scss\"",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.1.9",
+    "@storybook/addon-essentials": "^6.1.9",
+    "@storybook/addon-links": "^6.1.9",
+    "@storybook/react": "^6.1.9",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "node-sass": "^4.13.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "stylelint": "^13.6.1",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "stylelint-config-standard": "^20.0.0"
+  },
+  "dependencies": {
+    "@svgr/webpack": "^5.5.0",
+    "classnames": "^2.2.6",
+    "next": "^10.0.7",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}

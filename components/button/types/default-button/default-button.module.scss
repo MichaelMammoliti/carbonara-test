@@ -1,0 +1,45 @@
+@import 'globals.scss';
+
+.default-button {
+  $module: &;
+
+  align-items: stretch;
+  height: $size-48;
+  background: transparent;
+  transition-property: background;
+  transition-duration: .3s;
+
+  &__icon,
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-property: background;
+    transition-duration: .3s;
+    white-space: nowrap;
+  }
+
+  &__icon {
+    width: $size-48;
+    flex: 0 0 auto;
+
+    svg {
+      transition-property: fill;
+      transition-duration: .3s;
+    }
+  }
+
+  &__text {
+    padding: 0 16px;
+    flex: 1 1 auto;
+  }
+
+  &--display-inline {
+    display: inline-flex;
+  }
+
+  &--display-block {
+    display: flex;
+    width: 100%;
+  }
+}

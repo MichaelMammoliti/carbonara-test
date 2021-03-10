@@ -1,0 +1,14 @@
+@import 'globals.scss';
+
+.icon-button {
+  height: $size-48;
+  width: $size-48;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: .3s;
+  transition-property: background;
+  opacity: 1;
+  cursor: pointer;
+}

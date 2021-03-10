@@ -1,0 +1,136 @@
+@import 'globals.scss';
+
+.spacing {
+  &--align-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--display-inline {
+    > div {
+      display: table;
+    }
+  }
+
+  &--level-1 {
+    > * {
+      &:not(:first-child) {
+        padding-top: $size-36;
+      }
+    }
+
+    @include viewport(tablet) {
+      > * {
+        &:not(:first-child) {
+          padding-top: $size-48;
+        }
+      }
+    }
+
+    @include viewport(desktop) {
+      > * {
+        &:not(:first-child) {
+          padding-top: $size-48;
+        }
+      }
+    }
+  }
+
+  &--level-2 {
+    > * {
+      &:not(:first-child) {
+        padding-top: $size-32;
+      }
+    }
+
+    @include viewport(tablet) {
+      > * {
+        &:not(:first-child) {
+          padding-top: $size-32;
+        }
+      }
+    }
+
+    @include viewport(desktop) {
+      > * {
+        &:not(:first-child) {
+          padding-top: $size-32;
+        }
+      }
+    }
+  }
+
+  &--level-3 {
+    > * {
+      &:not(:first-child) {
+        padding-top: $size-16;
+      }
+    }
+
+    @include viewport(tablet) {
+      > * {
+        &:not(:first-child) {
+          padding-top: $size-24;
+        }
+      }
+    }
+
+    @include viewport(desktop) {
+      > * {
+        &:not(:first-child) {
+          padding-top: $size-24;
+        }
+      }
+    }
+  }
+
+  &--level-4 {
+    > * {
+      &:not(:first-child) {
+        padding-top: $size-8;
+      }
+    }
+
+    @include viewport(tablet) {
+      > * {
+        &:not(:first-child) {
+          padding-top: $size-16;
+        }
+      }
+    }
+
+    @include viewport(desktop) {
+      > * {
+        &:not(:first-child) {
+          padding-top: $size-16;
+        }
+      }
+    }
+  }
+
+  &--level-5 {
+    > * {
+      &:not(:first-child) {
+        padding-top: $size-4;
+      }
+    }
+
+    @include viewport(tablet) {
+      > * {
+        &:not(:first-child) {
+          padding-top: $size-8;
+        }
+      }
+    }
+
+    @include viewport(desktop) {
+      > * {
+        &:not(:first-child) {
+          padding-top: $size-8;
+        }
+      }
+    }
+  }
+}

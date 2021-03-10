@@ -1,0 +1,35 @@
+@import 'globals.scss';
+
+.container {
+  display: block;
+  width: 100%;
+  margin: auto;
+
+  &--size-s {
+    max-width: 500px;
+  }
+
+  &--size-m {
+    max-width: 800px;
+  }
+
+  &--size-l {
+    max-width: 1024px;
+  }
+
+  &--full {
+    max-width: 100%;
+  }
+
+  @include viewport(phone) {
+    padding: 0 $size-32;
+  }
+
+  @include viewport(tablet) {
+    padding: 0 $size-48;
+  }
+
+  @include viewport(desktop) {
+    padding: 0 $size-72;
+  }
+}

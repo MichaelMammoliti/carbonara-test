@@ -1,0 +1,57 @@
+@import 'globals.scss';
+
+.header {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  border-bottom: 1px solid rgba($color-white, .1);
+  height: 96px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+
+  &__navigation {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &--absolute,
+  &--sticky {
+    top: 0;
+    left: 0;
+  }
+
+  &--absolute {
+    position: absolute;
+  }
+
+  &--theme-light {
+    box-shadow: 0 2px 5px $color-black-opacity-10;
+  }
+
+  &--sticky {
+    position: fixed;
+  }
+
+  @include viewport(phone) {
+    .container {
+      padding: 0 $size-32;
+    }
+  }
+
+  @include viewport(tablet) {
+    .container {
+      padding: 0 $size-48;
+    }
+  }
+
+  @include viewport(desktop) {
+    height: 144px;
+
+    .container {
+      padding: 0 $size-72;
+    }
+  }
+}

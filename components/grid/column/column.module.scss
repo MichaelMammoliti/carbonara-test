@@ -35,6 +35,10 @@
     align-self: flex-end;
   }
 
+  &--align-self-stretch {
+    align-self: stretch;
+  }
+
   @include size(1);
   @include size(2);
   @include size(3);

@@ -1,17 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import classnames from 'classnames/bind';
 
-import { getViewport } from '@/utilities/viewport';
+import { useViewport } from '@/utilities/viewport';
 
 import styles from './hide.module.scss';
 
 const cx = classnames.bind(styles);
-
-const shouldHide = (viewportList, currentViewport) => {
-  const result = viewportList.find(viewportItem => viewportItem === currentViewport);
-
-  return Boolean(result);
-};
 
 const HideWithCSS = ({
   desktop,
@@ -36,29 +30,8 @@ const HideWithJS = ({
   tablet,
   desktop,
 }) => {
-  const [currentViewport, setViewport] = useState(getViewport());
-
-  const availableViewports = [
-    desktop && 'desktop',
-    tablet && 'tablet',
-    phone && 'phone',
-  ];
-
-  const handleResize = () => {
-    setViewport(getViewport());
-  };
-
-  useEffect(() => {
-    setViewport(getViewport());
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  const shouldHideChildren = shouldHide(availableViewports, currentViewport);
+  const viewport = useViewport();
+  const shouldHideChildren = { desktop, tablet, phone }[viewport];
 
   if (shouldHideChildren) {
     return null;

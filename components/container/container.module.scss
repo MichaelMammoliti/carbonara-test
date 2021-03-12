@@ -1,35 +1,63 @@
 @import 'globals.scss';
 
+@mixin vspacing($size) {
+  padding-top: $size;
+  padding-bottom: $size;
+}
+
+@mixin spacing($size) {
+  padding-left: $size;
+  padding-right: $size;
+}
+
 .container {
   display: block;
   width: 100%;
   margin: auto;
 
-  &--size-s {
-    max-width: 500px;
+  &--size-600 {
+    max-width: 600px;
   }
 
-  &--size-m {
-    max-width: 800px;
+  &--spacing-9 {
+    @include spacing($size-9);
   }
 
-  &--size-l {
-    max-width: 1024px;
+  &--spacing-20 {
+    @include spacing($size-20);
   }
 
-  &--full {
-    max-width: 100%;
+  &--spacing-58 {
+    @include spacing($size-58);
   }
 
-  @include viewport(phone) {
-    padding: 0 $size-32;
+  &--vspacing-20 {
+    @include vspacing($size-20);
   }
 
-  @include viewport(tablet) {
-    padding: 0 $size-48;
+  &--vspacing-18 {
+    @include vspacing($size-18);
   }
 
-  @include viewport(desktop) {
-    padding: 0 $size-72;
+  &--vspacing-70 {
+    @include vspacing($size-70);
+  }
+
+  &--vspacing-6 {
+    @include vspacing($size-6);
+  }
+
+  &--responsive {
+    @include viewport(phone) {
+      padding: 0 $size-20;
+    }
+
+    @include viewport(tablet) {
+      padding: 0 $size-30;
+    }
+
+    @include viewport(desktop) {
+      padding: 0 $size-58;
+    }
   }
 }

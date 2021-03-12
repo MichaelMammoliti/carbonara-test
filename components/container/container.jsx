@@ -5,10 +5,12 @@ import styles from './container.module.scss';
 
 const cx = classnames.bind(styles);
 
-const Container = ({ children, size, full }) => (
+const Container = ({ children, size, spacing, vspacing, full }) => (
   <div
     className={cx('container', {
       [`container--size-${size}`]: size,
+      [`container--spacing-${spacing}`]: spacing,
+      [`container--vspacing-${vspacing}`]: vspacing,
       'container--full': full,
     })}
   >

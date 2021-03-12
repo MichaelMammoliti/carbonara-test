@@ -24,3 +24,10 @@ export { default as Footer } from './footer';
 
 export { default as Hide } from './hide';
 export { default as Hero } from './hero';
+export { default as HeroClients } from './hero-clients';
+export { default as HeroSlide } from './hero-slide';
+export { default as SetUp } from './set-up';
+export { default as SetUpItem } from './set-up-item';
+export { default as Box } from './box';
+export { default as NavBar } from './nav-bar';
+export { Slider, Slide } from './slider';

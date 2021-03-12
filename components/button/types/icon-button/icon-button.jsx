@@ -7,18 +7,26 @@ import styles from './icon-button.module.scss';
 
 const cx = classnames.bind(styles);
 
-const IconButton = ({ icon, size, theme, disabled, onClick }) => (
-  <button
+const IconButton = ({ icon, size, theme, shape, border }) => (
+  <span
     className={cx('icon-button', {
       [`icon-button--theme-${theme}`]: theme,
-      'icon-button--disabled': disabled,
+      [`icon-button--size-${size}`]: size,
+      [`icon-button--shape-${shape}`]: shape,
+      'icon-button--border': border,
     })}
-    onClick={() => !disabled && onClick()}
-    disabled={disabled}
-    type="button"
   >
-    <Icon name={icon} size={size} />
-  </button>
+    <Icon name={icon.name} size={icon.size} />
+  </span>
 );
+
+IconButton.defaultProps = {
+  theme: 'transparent-dark-gray',
+  size: 60,
+  icon: {
+    size: 16,
+    name: 'arrow-left',
+  },
+};
 
 export default IconButton;

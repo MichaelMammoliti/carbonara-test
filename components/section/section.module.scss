@@ -37,66 +37,34 @@
     z-index: 2;
   }
 
-  &--boxed {
-    width: auto;
-    height: auto;
+  &--align-center #{&} {
+    &__content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &--absolute {
     position: absolute;
   }
 
-  &--align-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &--align-center & {
-    &__content {
-      height: auto;
-      width: auto;
-    }
-  }
-
-  &--spacing-none {
-    padding: 0;
-  }
-
-  &--spacing-small {
-    &__content {
-      padding: $size-48 $size-32;
-    }
-  }
-
-  &--spacing-medium {
-    &__content {
-      padding: $size-64 $size-48;
-    }
-  }
-
-  &--spacing-large {
-    &__content {
-      padding: $size-80 $size-64;
-    }
-  }
-
   &--spacing-responsive & {
     @include viewport(phone) {
       &__content {
-        padding: $size-48 $size-32;
+        padding: $size-20 $size-20;
       }
     }
 
     @include viewport(tablet) {
       &__content {
-        padding: $size-64 $size-48;
+        padding: $size-20 $size-20;
       }
     }
 
     @include viewport(desktop) {
       &__content {
-        padding: $size-80 $size-64;
+        padding: $size-20 $size-20;
       }
     }
   }
@@ -104,19 +72,19 @@
   &--spacing-responsive-vertical & {
     @include viewport(phone) {
       &__content {
-        padding: $size-48 0;
+        padding: $size-20 0;
       }
     }
 
     @include viewport(tablet) {
       &__content {
-        padding: $size-64 0;
+        padding: $size-20 0;
       }
     }
 
     @include viewport(desktop) {
       &__content {
-        padding: $size-80 0;
+        padding: $size-20 0;
       }
     }
   }
@@ -124,19 +92,19 @@
   &--spacing-responsive-horizontal & {
     @include viewport(phone) {
       &__content {
-        padding: 0 $size-48;
+        padding: 0 $size-20;
       }
     }
 
     @include viewport(tablet) {
       &__content {
-        padding: 0 $size-64;
+        padding: 0 $size-20;
       }
     }
 
     @include viewport(desktop) {
       &__content {
-        padding: 0 $size-80;
+        padding: 0 $size-20;
       }
     }
   }
@@ -144,19 +112,19 @@
   &--spacing-responsive-top & {
     @include viewport(phone) {
       &__content {
-        padding-top: $size-48;
+        padding-top: $size-20;
       }
     }
 
     @include viewport(tablet) {
       &__content {
-        padding-top: $size-64;
+        padding-top: $size-20;
       }
     }
 
     @include viewport(desktop) {
       &__content {
-        padding-top: $size-80;
+        padding-top: $size-20;
       }
     }
   }
@@ -164,19 +132,19 @@
   &--spacing-responsive-bottom & {
     @include viewport(phone) {
       &__content {
-        padding-bottom: $size-48;
+        padding-bottom: $size-20;
       }
     }
 
     @include viewport(tablet) {
       &__content {
-        padding-bottom: $size-64;
+        padding-bottom: $size-20;
       }
     }
 
     @include viewport(desktop) {
       &__content {
-        padding-bottom: $size-80;
+        padding-bottom: $size-20;
       }
     }
   }
@@ -184,19 +152,19 @@
   &--spacing-vertical-responsive & {
     @include viewport(phone) {
       &__content {
-        padding: $size-48 0;
+        padding: $size-20 0;
       }
     }
 
     @include viewport(tablet) {
       &__content {
-        padding: $size-64 0;
+        padding: $size-20 0;
       }
     }
 
     @include viewport(desktop) {
       &__content {
-        padding: $size-80 0;
+        padding: $size-20 0;
       }
     }
   }

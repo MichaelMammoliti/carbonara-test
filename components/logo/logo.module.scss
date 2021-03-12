@@ -3,5 +3,22 @@
 .logo {
   position: relative;
   display: table;
-  width: 174px;
+
+  &--name-header {
+    i {
+      svg {
+        height: 43px;
+      }
+    }
+  }
+
+  @include viewport(desktop) {
+    &--name-header {
+      i {
+        svg {
+          height: 63px;
+        }
+      }
+    }
+  }
 }

@@ -5,17 +5,18 @@ import styles from './spacing.module.scss';
 
 const cx = classnames.bind(styles);
 
-const Spacing = ({ children, level, align }) => {
-  const newChildren = React.Children.map(children, (childItem) => childItem ? childItem : null);
+const Spacing = ({ children, size }) => {
+  const newChildren = React.Children.toArray(children).filter(Boolean);
 
   return (
     <div
       className={cx('spacing', {
-        [`spacing--level-${level}`]: typeof level !== 'undefined',
-        [`spacing--align-${align}`]: align,
+        [`spacing--size-${size}`]: size,
       })}
     >
-      {React.Children.map(newChildren, (childItem) => (<div>{childItem}</div>))}
+      {React.Children.map(newChildren, (childItem) => (
+        <div>{childItem}</div>
+      ))}
     </div>
   );
 };

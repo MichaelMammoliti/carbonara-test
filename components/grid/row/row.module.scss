@@ -51,6 +51,18 @@
     flex-wrap: wrap;
   }
 
+  &--size-full {
+    height: 100%;
+    width: 100%;
+  }
+
+  &--size-full & {
+    &__items {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
   &--display-inline & {
     &__items {
       display: inline-flex;
@@ -125,20 +137,27 @@
   }
 
   @include spacing('8', $size-8);
-  @include spacing('16', $size-16);
-  @include spacing('24', $size-24);
-  @include spacing('32', $size-32);
-  @include spacing('48', $size-48);
+  @include spacing('12', $size-12);
+  @include spacing('20', $size-20);
+  @include spacing('25', $size-25);
+  @include spacing('27', $size-27);
+  @include spacing('30', $size-30);
+  @include spacing('33', $size-30);
+  @include spacing('40', $size-40);
+  // @include spacing('20', $size-20);
+  // @include spacing('20', $size-20);
+  // @include spacing('20', $size-20);
+  // @include spacing('20', $size-20);
 
   @include viewport(phone) {
-    @include responsive-spacing($size-32);
+    @include responsive-spacing($size-20);
   }
 
   @include viewport(tablet) {
-    @include responsive-spacing($size-32);
+    @include responsive-spacing($size-20);
   }
 
   @include viewport(desktop) {
-    @include responsive-spacing($size-48);
+    @include responsive-spacing($size-20);
   }
 }

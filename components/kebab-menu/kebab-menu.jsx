@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Button } from '@/components';
 
-const KebabMenu = ({ theme }) => {
-  const handleClick = () => {};
+const KebabMenu = ({ onClick }) => {
+  const [isActive, setIsActive] = useState(false);
 
-  const newTheme = theme === 'white' ? 'transparent-white' : 'transparent-gray';
+  const theme = isActive ? 'dark-gray-white' : 'transparent-dark-gray';
+
+  const handleButtonClick = () => {
+    setIsActive(!isActive);
+    onClick(!isActive);
+  };
 
   return (
-    <Button theme={newTheme} type="icon-button" size="medium" icon="kebabMenu" onClick={handleClick} />
+    <Button
+      type="icon-button"
+      size="30"
+      shape="round-square"
+      icon={{ name: 'hamburger-menu', size: '24' }}
+      theme={theme}
+      onClick={handleButtonClick}
+    />
   );
 };
 

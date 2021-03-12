@@ -5,44 +5,84 @@
 
   // Sizes
   // ======================================
+  &--size-12 {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
   &--size-14 {
     font-size: 14px;
-    line-height: 117%;
+    line-height: 24px;
   }
 
   &--size-16 {
     font-size: 16px;
-    line-height: 150%;
+    line-height: 26px;
   }
 
-  &--size-18 {
-    font-size: 18px;
-    line-height: 134%;
+  &--size-20 {
+    font-size: 20px;
+    line-height: 30px;
   }
 
-  &--size-24 {
-    font-size: 24px;
-    line-height: 134%;
+  &--size-20-26 {
+    font-size: 20px;
+    line-height: 26px;
   }
 
-  &--size-32 {
-    font-size: 32px;
-    line-height: 124%;
+  &--size-20-30 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &--size-20-35 {
+    font-size: 20px;
+    line-height: 35px;
+  }
+
+  &--size-25 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  &--size-30 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  &--size-35 {
+    font-size: 35px;
+    line-height: 40px;
   }
 
   &--size-36 {
     font-size: 36px;
-    line-height: 132%;
+    line-height: 48px;
   }
 
-  &--size-48 {
-    font-size: 48px;
-    line-height: 133%;
+  &--size-40 {
+    font-size: 40px;
+    line-height: 50px;
   }
 
-  &--size-64 {
-    font-size: 64px;
-    line-height: 150%;
+  &--size-40-80 {
+    font-size: 40px;
+    line-height: 80px;
+  }
+
+  &--size-50 {
+    font-size: 50px;
+    line-height: 66px;
+  }
+
+  &--size-60-70 {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  &--size-60 {
+    font-size: 60px;
+    line-height: 80px;
   }
 
   // Display
@@ -55,18 +95,14 @@
     display: block;
   }
 
-  // Cases
+  // Typography
   // ======================================
-  &--cases-lower {
-    text-transform: lowercase;
+  &--font-poppins {
+    font-family: 'Poppins', sans-serif;
   }
 
-  &--cases-upper {
-    text-transform: uppercase;
-  }
-
-  &--cases-capitalise {
-    text-transform: capitalize;
+  &--font-roboto {
+    font-family: 'Roboto', sans-serif;
   }
 
   // Align
@@ -83,6 +119,49 @@
     text-align: right;
   }
 
+  &--align-justify {
+    text-align: justify;
+    text-align-last: center;
+  }
+
+  // Weight
+  // ======================================
+  &--weight-100 {
+    font-weight: 100;
+  }
+
+  &--weight-200 {
+    font-weight: 200;
+  }
+
+  &--weight-300 {
+    font-weight: 300;
+  }
+
+  &--weight-400 {
+    font-weight: 400;
+  }
+
+  &--weight-500 {
+    font-weight: 500;
+  }
+
+  &--weight-600 {
+    font-weight: 600;
+  }
+
+  &--weight-700 {
+    font-weight: 700;
+  }
+
+  &--weight-800 {
+    font-weight: 800;
+  }
+
+  &--weight-900 {
+    font-weight: 900;
+  }
+
   // Decoration
   // ======================================
   &--underline {
@@ -92,10 +171,18 @@
   // Colors
   // ======================================
   &--color-white {
-    color: #fff;
+    color: $color-white;
   }
 
   &--color-black {
-    color: #000;
+    color: $color-black;
+  }
+
+  &--color-dark-gray {
+    color: $color-dark-gray;
+  }
+
+  &--color-dark-gray-80 {
+    color: $color-dark-gray-80;
   }
 }

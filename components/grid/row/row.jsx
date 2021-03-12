@@ -13,6 +13,7 @@ const Row = ({
   nowrap,
   direction,
   display,
+  size,
 }) => (
   <div
     className={cx('row', {
@@ -22,6 +23,7 @@ const Row = ({
       'row--no-wrap': nowrap,
       [`row--direction-${direction}`]: direction,
       [`row--display-${display}`]: display,
+      [`row--size-${size}`]: size,
     })}
   >
     <div className={styles['row__items']}>

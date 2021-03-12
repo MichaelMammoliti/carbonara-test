@@ -1,9 +1,6 @@
 @import 'globals.scss';
 
 .icon-button {
-  height: $size-48;
-  width: $size-48;
-  background: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,4 +8,71 @@
   transition-property: background;
   opacity: 1;
   cursor: pointer;
+
+  &--size-30 {
+    width: $size-30;
+    height: $size-30;
+  }
+
+  &--border {
+    border-width: 1px;
+    border-style: solid;
+  }
+
+  &--size-24 {
+    height: $size-24;
+    width: $size-24;
+  }
+
+  &--size-60 {
+    height: $size-60;
+    width: $size-60;
+  }
+
+  &--shape-square {
+    border-radius: 0;
+  }
+
+  &--shape-round-square {
+    border-radius: 8px;
+  }
+
+  &--shape-circle {
+    border-radius: 50%;
+  }
+
+  &--theme-dark-gray-white {
+    background: $color-dark-gray;
+
+    i {
+      svg {
+        fill: $color-white;
+      }
+    }
+
+    &:hover {
+      background: lighten($color-dark-gray, 10);
+    }
+  }
+
+  &--theme-transparent-dark-gray {
+    background: transparent;
+    border-color: $color-dark-gray;
+
+    i {
+      svg {
+        fill: $color-dark-gray;
+      }
+    }
+
+    &:hover {
+      background: $color-dark-gray;
+
+      i {
+        svg {
+          fill: $color-white;
+        }
+      }
+    }
+  }
 }

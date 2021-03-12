@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import classnames from 'classnames/bind';
+import { useTranslation } from 'react-i18next';
 
-import { getViewport } from '@/utilities';
+import { useViewport } from '@/utilities/viewport';
 
 import styles from './text.module.scss';
 
@@ -22,37 +23,35 @@ const Text = ({
   weight,
   tag,
   color,
-  cases,
   align,
   inline,
   display,
   block,
   translation,
-  translationOptions,
-  responsive,
+  // responsive,
   underline,
   font,
 }) => {
-  const viewport = useViewport();
+  const { t } = useTranslation();
 
   const Comp = tag || 'span';
   const newDisplay = display || (inline && 'inline') || (block && 'block');
-  // const { t } = useTranslation();
-  const text = translation && t(translation, translationOptions);
+  const text = translation && t(translation);
 
   const extraProps = (text)
     ? { dangerouslySetInnerHTML: { __html: text } }
     : { children };
 
-  const newSize = responsive
-    ? responsiveSizes[viewport][size]
-    : size;
+  // TODO
+  // const viewport = useViewport();
+  // const newSize = responsive
+  //   ? responsiveSizes[viewport][size]
+  //   : size;
 
   return (
     <Comp
       className={cx('text', {
-        [`text--size-${newSize}`]: newSize,
-        [`text--cases-${cases}`]: cases,
+        [`text--size-${size}`]: size,
         [`text--weight-${weight}`]: weight,
         [`text--color-${color}`]: color,
         [`text--align-${align}`]: align,
@@ -70,6 +69,7 @@ Text.defaultProps = {
   responsive: true,
   size: 2,
   display: 'block',
+  font: 'roboto',
 };
 
 export default Text;

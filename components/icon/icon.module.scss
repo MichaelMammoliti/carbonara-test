@@ -11,6 +11,8 @@
     height: 100%;
     top: 0;
     left: 0;
+    transition-property: fill;
+    transition-duration: .3s;
   }
 
   &--color-white {
@@ -19,41 +21,42 @@
     }
   }
 
-  &--size-small {
-    width: $size-8;
-    height: $size-8;
+  &--size-12 {
+    width: $size-12;
+    height: $size-12;
   }
 
-  &--size-normal {
+  &--size-16 {
     width: $size-16;
     height: $size-16;
   }
 
-  &--size-medium {
+  &--size-24 {
     width: $size-24;
     height: $size-24;
   }
 
-  &--size-large {
-    width: $size-32;
-    height: $size-32;
-  }
-
-  &--size-xlarge {
+  &--size-64 {
     width: $size-64;
     height: $size-64;
   }
 
-  &--size-xxlarge {
-    width: $size-128;
-    height: $size-128;
+  &--size-60 {
+    width: $size-60;
+    height: $size-60;
+  }
+
+  &--size-70 {
+    width: $size-70;
+    height: $size-70;
   }
 
   &--size-auto {
-    height: auto;
-    width: auto;
+    display: table;
 
     svg {
+      height: auto;
+      width: auto;
       position: relative;
     }
   }

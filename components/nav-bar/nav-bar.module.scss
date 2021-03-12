@@ -1,0 +1,27 @@
+@import 'globals.scss';
+
+$header-height: 56px;
+
+.nav-bar {
+  position: fixed;
+  top: $header-height;
+  width: 100%;
+  z-index: 1;
+  background: $color-white;
+  height: calc(100vh - #{$header-height});
+
+  &__header {
+    position: absolute;
+    width: 100%;
+  }
+
+  &__body {
+    padding-top: 44px;
+    height: 100%;
+  }
+}
+
+.language-selector {
+  padding: $size-12;
+  border-bottom: 1px solid $color-dark-gray;
+}

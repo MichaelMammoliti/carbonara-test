@@ -4,33 +4,18 @@
   $module: &;
 
   align-items: stretch;
-  height: $size-48;
   background: transparent;
   transition-property: background;
   transition-duration: .3s;
+  border-radius: 5px;
 
-  &__icon,
   &__text {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition-property: background;
+    transition-property: background, border;
     transition-duration: .3s;
     white-space: nowrap;
-  }
-
-  &__icon {
-    width: $size-48;
-    flex: 0 0 auto;
-
-    svg {
-      transition-property: fill;
-      transition-duration: .3s;
-    }
-  }
-
-  &__text {
-    padding: 0 16px;
     flex: 1 1 auto;
   }
 
@@ -41,5 +26,96 @@
   &--display-block {
     display: flex;
     width: 100%;
+  }
+
+  &--border {
+    border-width: 1px;
+    border-style: solid;
+  }
+
+  &--theme-ocra {
+    background: $color-ocra;
+    color: $color-white;
+  }
+
+  &--theme-dark-gray {
+    background: $color-dark-gray;
+    color: $color-white;
+  }
+
+  &--height-40 {
+    height: $size-40;
+  }
+
+  &--height-40 #{&} {
+    &__text {
+      padding: 0 $size-26;
+    }
+  }
+
+  &--weight-600 {
+    font-weight: 600;
+  }
+
+  &--height-55 {
+    height: $size-55;
+  }
+
+  &--height-35 {
+    height: $size-35;
+  }
+
+  &--height-35 #{&} {
+    &__text {
+      padding: 0 $size-22;
+    }
+  }
+
+  &--height-55 #{&} {
+    &__text {
+      padding: 0 $size-19;
+    }
+  }
+
+  &--height-58 {
+    height: $size-58;
+  }
+
+  &--height-58 #{&} {
+    &__text {
+      padding: 0 $size-38;
+    }
+  }
+
+  &--theme-transparent-dark-gray {
+    background: transparent;
+    color: $color-dark-gray;
+
+    &:hover {
+      background: $color-dark-gray;
+      color: $color-white;
+    }
+  }
+
+  &--theme-transparent-dark-gray#{&} {
+    &--border {
+      border-color: $color-dark-gray;
+    }
+  }
+
+  &--theme-transparent-white {
+    background: transparent;
+    color: $color-white;
+
+    &:hover {
+      background: $color-white;
+      color: $color-dark-gray;
+    }
+  }
+
+  &--theme-transparent-white#{&} {
+    &--border {
+      border-color: $color-white;
+    }
   }
 }

@@ -26,4 +26,8 @@ const Icon = ({ name, size, color }) => {
   );
 };
 
+Icon.defaultProps = {
+  size: 16,
+}
+
 export default Icon;

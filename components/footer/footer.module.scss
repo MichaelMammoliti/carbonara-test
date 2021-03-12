@@ -1,5 +1,10 @@
 @import 'globals.scss';
 
 .footer {
-  background: $color-black;
+  padding: $size-60;
+
+  &__content {
+    padding-bottom: 50px;
+    border-bottom: 1px solid $color-white;
+  }
 }

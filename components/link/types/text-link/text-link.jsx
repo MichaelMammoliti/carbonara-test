@@ -2,12 +2,8 @@ import React from 'react';
 
 import { Text } from '@/components';
 
-import styles from './text-link.module.scss';
-
-const TextLink = ({ children, translation }) => (
-  <span className={styles['text-link']}>
-    <Text translation={translation}>{children}</Text>
-  </span>
+const TextLink = ({ translation, underline, size }) => (
+  <Text translation={translation} underline={underline} color="black" size={size} />
 );
 
 TextLink.defaultProps = {};

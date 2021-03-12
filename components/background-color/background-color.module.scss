@@ -20,9 +20,17 @@
     background-color: $color-black;
   }
 
+  &--color-ocra-dark {
+    background-color: $color-ocra-dark;
+  }
+
+  &--color-dark-gray {
+    background-color: $color-dark-gray;
+  }
+
   // opacity
   // ========================================
-  &--opacity-solid {
+  &--opacity-opacque {
     opacity: 1;
   }
 

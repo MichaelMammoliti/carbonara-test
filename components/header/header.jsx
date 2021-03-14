@@ -46,13 +46,13 @@ const Header = () => {
 
       <Container spacing="20" vspacing="6">
         <Row nowrap spacing="none" justifyContent="space-between" alignItems="center">
-          <Column shrink grow>
+          <Column shrink>
             <Link href={home.path} type={false}>
               <Logo name="header" />
             </Link>
           </Column>
           <Column shrink>
-            <Row nowrap>
+            <Row display="inline" nowrap spacing="none">
               <Hide phone tablet>
                 <Column shrink>
                   <Navigation />

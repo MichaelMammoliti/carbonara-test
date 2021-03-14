@@ -56,20 +56,20 @@
     width: 100%;
   }
 
-  &--size-full & {
+  &--size-full > & {
     &__items {
       height: 100%;
       width: 100%;
     }
   }
 
-  &--display-inline & {
+  &--display-inline > & {
     &__items {
       display: inline-flex;
     }
   }
 
-  &--display-block & {
+  &--display-block > & {
     &__items {
       width: 100%;
       display: flex;

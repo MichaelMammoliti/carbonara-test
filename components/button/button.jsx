@@ -5,16 +5,16 @@ import buttonTypes from './types';
 import styles from './button.module.scss';
 
 const Button = (props) => {
-  const { type, onClick } = props;
+  const { type, htmlType, onClick } = props;
   const Comp = buttonTypes[type];
 
   const Component = Comp ? <Comp {...props} /> : null;
 
-  if (onClick) {
+  if (onClick || htmlType === 'submit') {
     return (
       <button
         className={styles['button']}
-        type="button"
+        type={htmlType}
         onClick={onClick}
       >
         {Component}
@@ -27,6 +27,7 @@ const Button = (props) => {
 
 Button.defaultProps = {
   type: 'default-button',
+  htmlType: 'button',
 };
 
 export default Button;

@@ -31,3 +31,6 @@ export { default as SetUpItem } from './set-up-item';
 export { default as Box } from './box';
 export { default as NavBar } from './nav-bar';
 export { Slider, Slide } from './slider';
+
+export { default as Input } from './input';
+export { default as Select } from './select';

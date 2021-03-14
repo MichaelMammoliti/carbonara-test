@@ -1,0 +1,26 @@
+@import 'globals.scss';
+
+.input {
+  input {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 54px;
+    padding: 10 5px;
+    display: block;
+    width: 100%;
+    border: 1px solid $color-dark-gray;
+    border-radius: 6px;
+  }
+
+  &--valid & {
+    input {
+      background: green;
+    }
+  }
+
+  &--invalid {
+    input {
+      background: red;
+    }
+  }
+}

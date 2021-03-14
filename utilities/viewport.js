@@ -17,25 +17,29 @@ export const getViewport = () => {
     if (window.innerWidth < tablet) {
       return 'tablet';
     }
-  }
 
-  return 'desktop';
+    return 'desktop';
+  }
 };
 
 export const useViewport = () => {
-  const [viewport, setViewport] = useState(getViewport());
+  const [viewport, setViewport] = useState();
 
   const handleWindowResize = () => {
     setViewport(getViewport());
   };
 
   useEffect(() => {
+    setTimeout(() => {
+      setViewport(() => getViewport());
+    }, 0);
+
     window.addEventListener('resize', handleWindowResize);
 
     return () => {
       window.removeEventListener('resize', handleWindowResize);
     };
-  }, [viewport]);
+  }, []);
 
   return viewport;
 };

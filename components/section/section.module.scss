@@ -45,6 +45,13 @@
     }
   }
 
+  &--align-bottom #{&} {
+    &__content {
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+
   &--absolute {
     position: absolute;
   }

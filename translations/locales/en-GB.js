@@ -1,5 +1,14 @@
 export default {
   pages: {
+    signup: {
+      sections: {
+        slider: {
+          usage: '“Light, Fast & Powerful, I love how easy Carbonara is to use”',
+          waitlist: '“Easily work with your team and keep the waitlist up to date.”',
+          hostpitality: '“Improve your customer experince and better hospitality.”',
+        },
+      },
+    },
     home: {
       title: 'some title',
       sections: {
@@ -78,5 +87,6 @@ export default {
     signUp: 'Sign up',
     downloadFromAppStore: 'Download from the app store',
     downloadFromAppStoreNow: 'Download now on the app store 100% Free',
+    next: 'Next',
   },
 };
